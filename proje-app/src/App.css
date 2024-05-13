@@ -1,38 +1,748 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  background: #252525;
+}
+
+.container {
+  position: absolute;
+  margin: auto;
+  top: 0%;
+  left: 80%;
+  right: 0;
+  bottom: 85%;
+  width: 300px;
+  height: 100px;
+  .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: rgb(255, 145, 2);
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+    &:hover {
+      cursor: pointer;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      margin: auto;
+      top: 22px;
+      right: 0;
+      bottom: 0;
+      left: 22px;
+      width: 12px;
+      height: 2px;
+      background: white;
+      transform: rotate(45deg);
+      transition: all .5s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      margin: auto;
+      top: -5px;
+      right: 0;
+      bottom: 0;
+      left: -5px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 2px solid white;
+      transition: all .5s;
+    }
+  }
+  input {
+    font-family: 'Inconsolata', monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: rgb(207, 145, 9);
+    color: white;
+    text-shadow: 0 0 10px rgb(255, 145, 2);
+    padding: 0 80px 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px 0 rgb(255, 145, 2),
+                0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      width: 300px;
+      opacity: 1;
+      cursor: text;
+    }
+    &:focus ~ .search {
+      right: -250px;
+      background: #151515;
+      z-index: 6;
+      &::before {
+        top: 0;
+        left: 0;
+        width: 25px;
+      }
+      &::after {
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 2px;
+        border: none;
+        background: white;
+        border-radius: 0%;
+        transform: rotate(-45deg);
+      }
+    }
+    &::placeholder {
+      color: white;
+      opacity: 0.5;
+      font-weight: bolder;
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+
+
+
+
+.container2 {
+  position: relative;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  padding-left: 2%; /* Butonu sağa doğru kaydırmak için */
+  padding-top: 20%;
+}
+
+html, body {
+  height: 0%;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  padding-right: 50%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button1 {
+  position: absolute;
+  margin-left: 68vw ;
+  margin-bottom: 269vh;
+  
+  width: 10%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button1:hover {
+  background-color: #2ff01e;
+  box-shadow: 0px 15px 20px rgb(3, 236, 22);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button2 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 226vh;
+  
+  width: 10%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button2:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button3 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 201vh;
+  
+  width: 10%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button3:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button4 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 176vh;
+  
+  width: 10%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button4:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button5 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 158vh;
+  
+  width: 10%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button5:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button6 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 140vh;
+  
+  width: 10%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button6:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button7 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 122vh;
+  
+  width: 10%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button7:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button8 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 104vh;
+  
+  width: 10%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button8:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.button9 {
+  position: absolute;
+  margin-left: 68vw ;
+  margin-bottom: 257vh;
+  
+  width: 10%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.button9:hover {
+  background-color: #f11f18;
+  box-shadow: 0px 15px 20px rgb(233, 21, 14);
+  color: #fff;
+  transform: translateY(-7px);
 }
+.newLocation{
+  top: 5vh;
+}
+
+.button10 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 217vh;
+  
+  width: 9%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fda603;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button10:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgb(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button11 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 210vh;
+  
+  width: 9%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fda603;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button11:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button12 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 192vh;
+  
+  width: 9%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fda603;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button12:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button13 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 185vh;
+  
+  width: 9%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fda603;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button13:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button14 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 167vh;
+  
+  width: 9%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fda603;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button14:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button15 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 149vh;
+  
+  width: 9%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fda603;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button15:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button16 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 131vh;
+  
+  width: 9%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fda603;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button16:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button17 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 113vh;
+  
+  width: 9%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fda603;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button17:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.button18 {
+  position: absolute;
+  margin-left: 0.01vw ;
+  margin-bottom: 95vh;
+  
+  width: 9%; /* Butonun genişliği, sayfa genişliğinin yüzde 10'u kadar olacak */
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fda603;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  }
+
+.button18:hover {
+  background-color: #fda603;
+  box-shadow: 0px 15px 20px rgba(255, 145, 2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.container3 {
+  margin-left: 19vw; /* Sayfanın genişliğinin %17'si kadar sol boşluk */
+  top: -118vh;
+  width: 50%; /* Her bir sütunun genişliği %50 yapılır */
+  position: relative;
+
+}
+.container4 {
+
+  margin-left: 19vw;
+  top: -112vh;
+  width: 50%; /* Her bir sütunun genişliği %50 yapılır */
+  position: relative;
+}
+
+.container5 {
+  margin-left: 19vw; /* Sayfanın genişliğinin %17'si kadar sol boşluk */
+  top: -100vh;
+  width: 50%; /* Her bir sütunun genişliği %50 yapılır */
+  position: relative;
+
+}
+.container6 {
+
+  margin-left: 19vw;
+  top: -99vh;
+  width: 50%; /* Her bir sütunun genişliği %50 yapılır */
+  position: relative;
+}
+
+.container7 {
+  margin-left: 19vw; /* Sayfanın genişliğinin %17'si kadar sol boşluk */
+  top: -91vh;
+  width: 50%; /* Her bir sütunun genişliği %50 yapılır */
+  position: relative;
+
+}
+.container8 {
+
+  margin-left: 19vw;
+  top: -88vh;
+  width: 50%; /* Her bir sütunun genişliği %50 yapılır */
+  position: relative;
+}
+
+.container9 {
+
+  margin-left: 19vw;
+  top: -85vh;
+  width: 50%; /* Her bir sütunun genişliği %50 yapılır */
+  position: relative;
+}
+
+
+
+
+
+  
+
+
+
+
