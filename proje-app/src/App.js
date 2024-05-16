@@ -1,10 +1,11 @@
 import './App.css';
+import HomePage from './pages/Home/HomePage';
 
 
 function App() {
   return (
-    <div className="container-fluid">
-
+    <div>
+      <HomePage/>
 
     </div>
   );
