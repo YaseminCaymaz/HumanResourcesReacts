@@ -160,6 +160,7 @@ function ProfilePanel() {
               </div>
             </div>
             
+            <button className="btn1" style={{marginLeft: '80%', marginTop:'2%'}}>Değişiklikleri Kaydet</button>
 
           </div>
 
